@@ -18,12 +18,12 @@ function Home(){
     const pagesVisited = pageNumber * picsPerPage;
     const slicedFlags = flags.slice(pagesVisited, pagesVisited + picsPerPage);
 
+    
     const showFlags = slicedFlags.map((flag) => {
         console.log(flag)
         return(
         <>
         <Card sx ={{ 
-            maxWidth: 345,
             margin: "25px",          
 
         }}>
@@ -52,6 +52,7 @@ function Home(){
         </Card>
       </>)
     });
+   
 
     const pageCount = Math.ceil(flags.length / picsPerPage);
     const handlePageClick = ({ selected }) => {
@@ -60,6 +61,7 @@ function Home(){
 
     return(
         <>
+
         <h1> Country Flags </h1> <hr />
         <div className="home-container">
             <div className="country-flags"> 
